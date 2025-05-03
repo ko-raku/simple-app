@@ -1,0 +1,22 @@
+<h1>{{.Title}}の解析結果</h1>
+
+<form action="/search/{{.Title}}" method="GET">
+    <label for="query">解析:</label>
+    <input type="text" name="query" id="query">
+    <button type="submit">解析</button>
+</form>
+
+{{if .SearchResults}}
+<div>
+    <h2>解析結果:</h2>
+    <ul>
+        {{range $key, $value := .SearchResults}}
+        <li>{{$key}}: {{$value}}回</li>
+        {{end}}
+    </ul>
+</div>
+{{end}}
+
+<div>{{printf "%s" .Body}}</div>
+
+<p>[<a href="/view/{{.Title}}">表示</a>] [<a href="/edit/{{.Title}}">編集</a>]</p>

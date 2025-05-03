@@ -1,0 +1,11 @@
+<h1>{{.Title}}</h1>
+
+<p>[<a href="/edit/{{.Title}}">Edit</a>]</p>
+
+<form action="/search/{{.Title}}" method="GET">
+    <label for="query">解析:</label>
+    <input type="text" name="query" id="query">
+    <button type="submit">解析</button>
+</form>
+
+<div>{{printf "%s" .Body}}</div>
