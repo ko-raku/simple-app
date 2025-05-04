@@ -19,7 +19,7 @@
 ### インストール手順
 1. リポジトリをクローン
 ``` 
-   git clone https://github.com/yourusername/simpleApp.git
+   git clone https://github.com/ko-raku/simple-app.git
    cd simpleApp
 ```
 1. 依存関係のインストール
